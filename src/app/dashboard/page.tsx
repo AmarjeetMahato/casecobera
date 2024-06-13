@@ -26,9 +26,9 @@ const Dashboard = async() => {
         const session =await  auth()
         const user = session?.user
 
-        const ADMIN_EMAIL = process.env.ADMIN_EMAIL!
+        const ADMIN_EMAIL = process.env.NEXT_PUBLIC_ADMIN_EMAIL!
 
-        if(!user || user?.email !== ADMIN_EMAIL ){
+        if(!user || user?.email !== NEXT_PUBLIC_ADMIN_EMAIL ){
            return notFound()
         }
 
