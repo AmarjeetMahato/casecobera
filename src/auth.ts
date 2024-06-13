@@ -6,4 +6,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     secret: process.env.AUTH_SECRET!,
     adapter:PrismaAdapter(db),
   providers: [Google],
+
+ 
 })
