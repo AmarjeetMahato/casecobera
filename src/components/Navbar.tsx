@@ -10,7 +10,11 @@ import { ArrowRight } from "lucide-react"
 const Navbar = () => {
   const { data: session } = useSession()
   const user = session?.user
-  const isAdmin = user?.email === process.env.ADMIN_EMAIL!
+  console.log(session?.user?.email);
+  
+  const isAdmin = user?.email === process.env.NEXT_PUBLIC_ADMIN_EMAIL!
+  console.log(isAdmin);
+  
 
   return (
     <nav className='sticky z-[100] h-14 inset-x-0 top-0 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all'>
